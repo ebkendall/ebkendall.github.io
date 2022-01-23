@@ -1,0 +1,261 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+body {
+  background-color: #FFF;
+  font-family: 'Lora', serif;
+  font-size: medium;
+  text-align: center;
+}
+
+.youtube-player { display: block; margin: 0 auto; }
+
+blockquote {
+  margin-left: 25px;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+span.author {
+  color: #aaa;
+  display: block;
+}
+
+span.date {
+  color: #aaa;
+  display: block;
+}
+
+/*h1, h2, h3, h4, h5, h6 {
+  font-size: 100%; }*/
+
+h1 { margin-bottom: 1em; }
+p { margin: 1em 0; }
+
+a         { color: #00a; }
+a:hover   { color: #00a; }
+a:visited { color: #00a; }
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+@media screen and (max-device-width: 480px){
+  body { -webkit-text-size-adjust: 100%; }
+}
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+  margin-left: 0em;
+}
+
+ul.posts li {
+  line-height: 1.5em;
+}
+
+code {
+  font-family: 'Inconsolata', sans-serif;
+  font-size: medium;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-family: 'Inconsolata', sans-serif;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+.site {
+  font-size: 100%;
+  text-align: left;
+  width: 65em;
+  padding: 0px 10px 10px 10px;
+  margin: 2em auto 0em;
+  line-height: 1.5em;
+}
+
+.site .header a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site .header h1.title {
+  font-size: 20px;
+  display: inline-block;
+  margin-bottom: 2em;
+}
+
+.site .header h1.title a {
+  color: #a00;
+}
+
+.site .header h1.title a:hover {
+  color: #000;
+}
+
+.site .header a.extra {
+  color: #aaa;
+  margin-left: 1em;
+}
+
+.site .header a.extra:hover {
+  color: #000;
+}
+
+.site .meta {
+  color: #aaa;
+}
+
+.site .footer {
+  font-size: 90%;
+  border-top: 1px solid #aaa;
+  margin-top: 0.5em;
+  overflow: hidden;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+/* standard */
+#post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding-left: .4em;
+  overflow-x: auto;
+}
+
+#post ul, #post ol {
+  margin-left: 1.35em;
+}
+
+#post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+}
+
+#post pre code {
+  border: none;
+}
+
+/* terminal */
+#post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+#post pre.terminal code {
+  background-color: #333;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  width: 50%;
+  padding: 10px;
+  vertical-align: top;
+}
+
+.site .footer {
+  margin-top: 30px;
+  padding-top: 5px;
+}
+
+
+.site .content {
+  width: 75%;
+  font-size: 14px;
+  min-height: 630px;
+}
+
+.site .content .banner {
+  padding-bottom: 20px;
+}
+
+.site .content .banner .photo {
+  float: left;
+  margin-right: 30px;
+}
+.site .content .banner .photo > img
+{
+  border-radius: 50%;
+}
+
+.new {
+  padding-bottom: 30px;
+  border-bottom: 4px solid #eee;
+}
+
+.citation {
+  font-style: italic;
+  background-color: yellow;
+}
+
+.citation::before {
+    content: "[";
+}
+
+.citation::after {
+    content: "]";
+}
+
+ul, ol {
+  margin-left: 1.35em;
+}
+
+#refs {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: 20px;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.publications
+{
+  line-height: 1.3em;
+}
+
+.homecontent
+{
+  padding-top: 20px;
+}
