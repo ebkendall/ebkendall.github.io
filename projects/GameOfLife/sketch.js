@@ -10,7 +10,7 @@ let grid;
 let next;
 let cols;
 let rows;
-let resolution = 20;
+let resolution = 12;
 let fillCol = [50, 255];
 
 // Switch
@@ -24,7 +24,7 @@ let button_template; // "rand_or_blank" switch
 
 
 function setup() {
-	createCanvas(800, 600);
+	createCanvas(480, 300);
 	cols = width / resolution;
 	rows = height / resolution;
 
