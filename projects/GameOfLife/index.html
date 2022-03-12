@@ -1,22 +1,33 @@
----
-layout: default
-title: Emmett B. Kendall | Digital Projects
----
+<!DOCTYPE html>
+<html>
+{% include head.html %}
 
-<div class="site">
-	<div class="split left">
-		<div class="centered">
-			<h2>Jane Flex</h2>
-			<p>Some text.</p>
+<body>
+	<div class="container">
+		<div class="site">
+			{% include header.html %}
+			<div class="content">
+				<div class="site">
+					<div class="split left">
+						<div class="centered">
+							<h2>Jane Flex</h2>
+							<p>Some text.</p>
+						</div>
+					</div>
+				
+					<div class="split right">
+						<div class="centered">
+							<h2>John Doe</h2>
+							<p>Some text here too.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar">
+			</div>
+			{% include footer.html %}
 		</div>
 	</div>
+</body>
 
-	<div class="split right">
-		<div class="centered">
-			<h2>John Doe</h2>
-			<p>Some text here too.</p>
-		</div>
-	</div>
-</div>
-
-</ul>
+</html>
