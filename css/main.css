@@ -125,6 +125,7 @@ ul.posts span {
 /* If you want the content centered horizontally and vertically */
 .site .centered {
   position: absolute;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
