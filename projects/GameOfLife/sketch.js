@@ -10,21 +10,25 @@ let grid;
 let next;
 let cols;
 let rows;
-let resolution = 12;
+let resolution = 10;
 let fillCol = [50, 255];
 
 // Switch
 let turnOff;
-let rand_or_blank;
+let bottomSame;
 
 // Button selection
 let button; 		 // "turnOff" switch
-let button_template; // "rand_or_blank" switch
+let button_random;
+let button_glider;
+let button_penta;
+let button_gun;
+let button_blank;
 
 
 
 function setup() {
-	createCanvas(480, 300);
+	createCanvas(600, 450);
 	cols = width / resolution;
 	rows = height / resolution;
 
@@ -40,14 +44,26 @@ function setup() {
 	next = grid;
 
 	turnOff = 1;
-	rand_or_blank = 1;
+	bottomSame = 0;
 
 	// button characteristics
 	button = createButton('START/STOP');
 	button.mousePressed(changeB);
 
-	// button_template = createButton('RANDOM or CLEAR');
-	// button_template.mousePressed(changeB2);
+	button_glider = createButton('Ex: Glider');
+	button_glider.mousePressed(exampleFig1);
+
+	button_penta = createButton('Ex: Pentadecathlon');
+	button_penta.mousePressed(exampleFig2);
+
+	button_gun = createButton('Ex: Gosper glider gun');
+	button_gun.mousePressed(exampleFig3);
+
+	button_random = createButton('Random');
+	button_random.mousePressed(reRandom);
+
+	button_blank = createButton('Blank');
+	button_blank.mousePressed(reSet);
 
 }
 
@@ -84,6 +100,11 @@ function draw() {
 			}
 		}
 
+		if (bottomSame == 1) {
+			for(let i = 0; i < cols; i++) {
+				next[i][0].val = 0;
+			}
+		}
 		grid = next;
 	}
 }
@@ -113,11 +134,106 @@ function changeB() {
 	}
 }
 
-function changeB2() {
-	if (rand_or_blank == 0) {
-		rand_or_blank = 1;
-	} else {
-		rand_or_blank = 0;
+function reRandom() {
+
+	turnOff = 1; // Stop the motion and re-randomize things
+	bottomSame = 0;
+
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			grid[i][j].val = floor(random(2));
+		}
+	}
+}
+
+// Glider
+function exampleFig1() {
+
+	turnOff = 1;
+	bottomSame = 0;
+
+	// Reset everything to black
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			grid[i][j].val = 0;
+		}
+	}
+
+	grid[14][10].val = 1; grid[17][10].val = 1;
+	grid[14][12].val = 1; grid[15][13].val = 1;
+	grid[16][13].val = 1; grid[17][13].val = 1;
+	grid[18][13].val = 1; grid[18][12].val = 1;
+	grid[18][11].val = 1;
+}
+
+// Penta
+function exampleFig2() {
+
+	turnOff = 1;
+	bottomSame = 0;
+
+	// Reset everything to black
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			grid[i][j].val = 0;
+		}
+	}
+	grid[17][10].val = 1; grid[17][11].val = 1; grid[17][13].val = 1;
+	grid[17][14].val = 1; grid[17][15].val = 1; grid[17][16].val = 1;
+	grid[17][18].val = 1; grid[17][19].val = 1;
+	grid[16][12].val = 1; grid[16][17].val = 1;
+	grid[18][12].val = 1; grid[18][17].val = 1;
+
+}
+
+// Gun
+function exampleFig3() {
+
+	turnOff = 1;
+	bottomSame = 1;
+
+	// Reset everything to black
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			grid[i][j].val = 0;
+		}
+	}
+
+	// Square
+	grid[3][13].val = 1; grid[4][13].val = 1;
+	grid[3][14].val = 1; grid[4][14].val = 1;
+
+	// Center
+	grid[13][13].val = 1; grid[13][14].val = 1; grid[13][15].val = 1;
+	grid[14][12].val = 1; grid[14][16].val = 1;
+	grid[15][17].val = 1; grid[16][17].val = 1;
+	grid[15][11].val = 1; grid[16][11].val = 1; grid[17][14].val = 1;
+	grid[18][12].val = 1; grid[18][16].val = 1;
+	grid[19][13].val = 1; grid[19][14].val = 1; grid[19][15].val = 1;
+	grid[20][14].val = 1;
+
+	// other V
+	grid[23][13].val = 1; grid[23][12].val = 1; grid[23][11].val = 1;
+	grid[24][13].val = 1; grid[24][12].val = 1; grid[24][11].val = 1;
+	grid[25][14].val = 1; grid[25][10].val = 1;
+	grid[27][10].val = 1; grid[27][9].val = 1; grid[27][14].val = 1; grid[27][15].val = 1;
+
+	// Square
+	grid[37][11].val = 1; grid[38][11].val = 1;
+	grid[37][12].val = 1; grid[38][12].val = 1;
+
+}
+
+// Blank
+function reSet() {
+	turnOff = 1;
+	bottomSame = 0;
+
+	// Reset everything to black
+	for (let i = 0; i < cols; i++) {
+		for (let j = 0; j < rows; j++) {
+			grid[i][j].val = 0;
+		}
 	}
 }
 
