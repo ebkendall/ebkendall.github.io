@@ -102,20 +102,6 @@ ul.posts span {
   line-height: 1.5em;
 }
 
-.site .split {
-  width: 50%;
-}
-
-/* Control the left side */
-.site .left {
-  left: 0;
-}
-
-/* Control the right side */
-.site .right {
-  right: 0;
-}
-
 .site .header a {
   font-weight: bold;
   text-decoration: none;
