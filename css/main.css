@@ -116,13 +116,6 @@ ul.posts span {
   right: 0;
 }
 
-/* If you want the content centered horizontally and vertically */
-.site .centered {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .site .header a {
   font-weight: bold;
   text-decoration: none;
