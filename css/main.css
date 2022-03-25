@@ -210,10 +210,10 @@ td {
   float: left;
   margin-right: 30px;
 }
-.site .content .banner .photo > img
+/* .site .content .banner .photo > img
 {
   border-radius: 50%;
-}
+} */
 
 .new {
   padding-bottom: 30px;
