@@ -255,3 +255,19 @@ hr {
 {
   padding-top: 20px;
 }
+
+script {
+    display:block;
+    color: #a00;
+    background-color:#000;
+    font-weight:normal;
+    padding:10px;
+    border:1px solid #a00;
+    text-align:left;
+}
+.script-area {
+    text-align:center;
+    width:79%;
+    margin-left:10%;
+    margin-right:10%;
+}
