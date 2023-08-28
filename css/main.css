@@ -211,6 +211,12 @@ td {
   padding: 10px;
 }
 
+.site .content .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .site .content .banner .photo {
   float: left;
   margin-right: 30px;
