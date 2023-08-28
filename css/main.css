@@ -206,6 +206,11 @@ td {
   padding-bottom: 20px;
 }
 
+.site .content .column {
+  float: left;
+  padding: 10px;
+}
+
 .site .content .banner .photo {
   float: left;
   margin-right: 30px;
