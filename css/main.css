@@ -179,12 +179,7 @@ ul.posts span {
   background-color: #333;
 }
 
-table {
-  border-collapse: collapse;
-}
-
 td {
-  border: 1px solid black;
   padding: 10px;
   vertical-align: top;
 }
