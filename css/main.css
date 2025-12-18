@@ -292,7 +292,7 @@ script {
   grid-template-columns: 9.5rem 1fr;
   gap: 0.75rem 1.25rem;
   align-items: start;
-  padding: 0.6em 0 0.6em 0;
+  padding: 0 0 0 0;
 }
 .news-date {
   color: #666;
