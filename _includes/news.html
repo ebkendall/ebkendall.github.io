@@ -1,4 +1,4 @@
-{% raw %}{% if site.data.news and site.data.news.size > 0 %}
+{% if site.data.news and site.data.news.size > 0 %}
 <ul class="news-list">
   {% assign items = site.data.news | sort: 'date' | reverse %}
   {% for item in items %}
@@ -8,4 +8,4 @@
   </li>
   {% endfor %}
 </ul>
-{% endif %}{% endraw %}
+{% endif %}
