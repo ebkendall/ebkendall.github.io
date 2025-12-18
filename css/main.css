@@ -282,7 +282,7 @@ script {
 /* Align news list with other lists/blocks in content */
 .news-list {
   list-style: none;
-  margin-left: -2.35em;
+  margin-left: -5em;
   padding-left: 0;
 }
 
