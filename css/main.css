@@ -292,8 +292,7 @@ script {
   grid-template-columns: 9.5rem 1fr;
   gap: 0.75rem 1.25rem;
   align-items: start;
-  padding: 0.6em 0;
-  border-bottom: 1px solid #eee;
+  padding: 0.6em 0 0.6em 0;
 }
 .news-date {
   color: #666;
@@ -318,3 +317,6 @@ script {
     margin-bottom: 0.25rem;
   }
 }
+
+/* Align news list with other lists/blocks in content */
+.news-list { margin-left: 1.35em; }
