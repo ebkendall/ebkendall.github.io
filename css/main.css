@@ -279,11 +279,11 @@ script {
     margin-right:10%;
 }
 
-/* News list styling */
+/* Align news list with other lists/blocks in content */
 .news-list {
   list-style: none;
-  margin: 0 0 1.5em 0;
-  padding: 0;
+  margin-left: -1.35em;
+  padding-left: 0;
 }
 
 /* Two-column grid: fixed date column on the left, flexible content on the right */
@@ -317,6 +317,4 @@ script {
     margin-bottom: 0.25rem;
   }
 }
-
-/* Align news list with other lists/blocks in content */
-.news-list { margin-left: 0; padding-left: 0; }
+/*****************************************************************************/
