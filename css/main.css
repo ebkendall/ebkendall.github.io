@@ -285,21 +285,36 @@ script {
   margin: 0 0 1.5em 0;
   padding: 0;
 }
+
+/* Two-column grid: fixed date column on the left, flexible content on the right */
 .news-item {
-  display: flex;
-  gap: 1em;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 9.5rem 1fr;
+  gap: 0.75rem 1.25rem;
+  align-items: start;
   padding: 0.6em 0;
   border-bottom: 1px solid #eee;
 }
 .news-date {
   color: #666;
-  min-width: 9.5rem;
-  width: 9.5rem;
   font-family: 'Inconsolata', monospace;
   font-size: 0.95em;
+  text-align: right;
+  padding-right: 0.5rem;
 }
 .news-body {
-  flex: 1 1 auto;
+  word-wrap: break-word;
 }
 .news-body a { color: #00a; }
+
+/* Responsive: stack into single column on narrow screens */
+@media screen and (max-width: 600px) {
+  .news-item {
+    grid-template-columns: 1fr;
+  }
+  .news-date {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 0.25rem;
+  }
+}
