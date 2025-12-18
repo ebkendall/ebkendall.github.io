@@ -3,5 +3,5 @@
 # Edit theme's home layout instead if you wanna make some changes
 # See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
-title: Emmett B. Kendall | NCSU Statistics
+title: Emmett B. Kendall | UT Dallas, Mathematical Sciences
 ---

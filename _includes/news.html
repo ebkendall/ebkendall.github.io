@@ -1,0 +1,11 @@
+{% raw %}{% if site.data.news and site.data.news.size > 0 %}
+<ul class="news-list">
+  {% assign items = site.data.news | sort: 'date' | reverse %}
+  {% for item in items %}
+  <li class="news-item">
+    <time class="news-date" datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%b %-d, %Y" }}</time>
+    <div class="news-body">{{ item.text }}</div>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}{% endraw %}
